@@ -1,0 +1,21 @@
+<%- include partials/header.ejs %>
+<div style="width: 83%; margin: auto; margin-top: 50px; ">
+  <div class="card" style="width: 100%;">
+      <div style="padding: 20px">
+          <h2 style="margin-top: 10px;">Profile</h2>
+          <h5 class="card-title" style="margin-top: 10px;">View your profile settings..</h5>
+          <h5><%= name %></h5>
+          <h5><%= email %></h5>
+          <hr>
+          <%- include partials/partials.ejs %>
+          <form action="/profile" method="POST">
+            <input class="form-control mt-2" style="width: 30%" type="text" name="name" placeholder="name">
+            <input class="form-control mt-2" style="width: 30%" type="text" name="email" placeholder="email">
+            <input class="form-control mt-2" style="width: 30%" type="text" name="password" placeholder="new password">
+            <input class="form-control mt-2" style="width: 30%" type="text" name="password2" placeholder="confirm password">
+            <button type="submit" class="btn btn-primary mt-4">Update profile</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<% if(typeof errors !== 'undefined') { %> <% if(errors.length > 0) { %> <%
+delete errors[0] %> <% errors.forEach(error=> { %>
+<div class="alert alert-danger" role="alert">
+  <%= error[Object.keys(error)[0]] %>
+</div>
+<% })}} %> <% if(typeof success_msg !== 'undefined') { %> <%
+success_msg.forEach(success => { %>
+<div class="alert light-green accent-2" role="alert">
+  <%= success %>
+</div>
+<% })}; %> <% if(typeof error_msg !== 'undefined') { %> <%
+error_msg.forEach(error => { %>
+<div class="alert alert-danger" role="alert">
+  <%= error %>
+</div>
+<% })}; %>
